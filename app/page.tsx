@@ -8,12 +8,8 @@ export default function Home() {
         Over the board
       </h1>
       <p className="text-center">
-        A simple app to play chess over the board
+        Find people to play chess with in person.
       </p>
-
-      
-
-
     </main>
   )
 }
