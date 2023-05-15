@@ -1,7 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import Cookies from 'js-cookie';
+
 export default function Home() {
+  console.log(Cookies.get('count'));
+  const count: number = Cookies.get('count') ? parseInt(String(Cookies.get('count'))) : 0;
+  const newCount: number = count + 1;
+  Cookies.set('count', String(newCount));
+
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <h1 className='text-4xl font-bold text-center m-4'>Meet the developer</h1>
@@ -43,6 +50,10 @@ export default function Home() {
       <div className='flex flex-col items-center'>
         <h1 className='text-2xl font-bold text-center m-4'>Fun projects</h1>
         <p>⚙️ In progess of being added to this website</p>
+      </div>
+
+      <div>
+        <p className='text-center'>You are visitor number {newCount}</p>
       </div>
 
     </main>
