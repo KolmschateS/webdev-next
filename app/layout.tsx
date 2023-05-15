@@ -5,6 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
+import GDPR from '@/components/GDPR'
 
 export const metadata = {
   title: 'Create Next App',
@@ -25,6 +26,7 @@ export default function RootLayout({
           {children}
 
           < Footer />
+          <GDPR fullScreen={true} />
         </div>
       </body>
     </html>
