@@ -4,7 +4,7 @@ import { useState, useEffect} from "react";
 import Cookies from "js-cookie";
 
 
-export default function GDPR( {fullScreen}: boolean ) {
+export default function GDPR( {fullScreen} ) {
     const [showGDPRWindow, setShowGDPRWindow] = useState(false);
     const [gdpr, setGDPR] = useState("")
 
@@ -18,40 +18,35 @@ export default function GDPR( {fullScreen}: boolean ) {
     const handleAccept = () => {
         Cookies.set('gdpr', 'accepted');
         setGDPR("accepted");
-        if (fullScreen == false) {
-            setShowGDPRWindow(true);
-        }
-        else
-        {
-            setShowGDPRWindow(false);
-        }
+        setShowGDPRWindow(false);
     }
 
     const handleBasic = () => {
         Cookies.set('gdpr', 'basic');
         setGDPR("basic");
-        if (fullScreen == false) {
-            setShowGDPRWindow(true);
-        }
-        else
-        {
-            setShowGDPRWindow(false);
-        }
+        setShowGDPRWindow(false);
     }
 
     useEffect(() => {
-        const cookie: string = String(Cookies.get('gdpr'));
-        setGDPR(cookie);
-        if (fullScreen == false) {
+        const gdprCookie = Cookies.get('gdpr');
+        if (gdprCookie == undefined) {
             setShowGDPRWindow(true);
-        }
-        if (cookie === undefined) {
-            setShowGDPRWindow(true);
+        } else {
+            if (fullScreen) {
+                return null;
+            }
+            else
+            {
+                setShowGDPRWindow(true);
+                setGDPR(gdprCookie);
+            }
         }
     }, []);
 
     if (!showGDPRWindow) {
-        return null;
+        if (fullScreen) {
+            return null;
+        }
     }
 
   return (
@@ -63,7 +58,6 @@ export default function GDPR( {fullScreen}: boolean ) {
             <p>All the GDPR stuff goes here</p>
 
             {/* GDPR stuff */}
-
             <div>
                 <button className={gdpr == "accepted" ? activeButton : inactiveButton} onClick={handleAccept}>Accept</button>
             </div>
