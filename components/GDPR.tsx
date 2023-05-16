@@ -33,7 +33,7 @@ export default function GDPR( {fullScreen} ) {
             setShowGDPRWindow(true);
         } else {
             if (fullScreen) {
-                return null;
+                setShowGDPRWindow(false);
             }
             else
             {
