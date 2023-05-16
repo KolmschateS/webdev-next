@@ -33,7 +33,7 @@ export default function Nav() {
       }, [isMobileMenuOpen]);
     
     return (
-        <nav className="bg-opacity-50 backdrop-filter backdrop-blur-lg fixed top-0 left-0 w-full z-50">
+        <nav className="bg-opacity-5 backdrop-filter bg-black backdrop-blur-lg fixed top-0 left-0 w-full z-50">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 < Link className="flex items-center" href="/">
                     < Image src="/otb.svg" alt="Over the board" width={32} height={32} />
