@@ -13,7 +13,6 @@ export default function Home() {
       < Image className='rounded-full' src="/sebas.png" width={256} height={256} alt="Image of the developer"></Image>
       <div className='bg-white mt-6 p-6'>
         <h1 className='text-4xl font-bold text-center text-black'>Sebastiaan Kolmschate</h1>
-
         {/* Social media */}
         <div className='flex flex-row items-center justify-center'>
           < Link href="https://www.linkedin.com/in/sebastiaan-kolmschate-66a2a3170/">
@@ -32,7 +31,7 @@ export default function Home() {
           <p>🇳🇱 From the Netherlands</p>
           <p>🏫 Studying Computer Science at the University of Applied Sciences Windesheim</p>
           <p>🤓 Interested in web development, machine learning and data science</p>
-          <p></p>
+        < Link href={"/contact"} className='bg-black p-2 text-white mt-3'>Get in touch</Link>
         </div>
       </div>
       
