@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 
 import Cookies from 'js-cookie'
 
+// TODO fix this mess
 export default function PageVisits() {
   const [pageVisits, setPageVisits] = useState(0)
 
