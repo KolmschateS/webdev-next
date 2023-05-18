@@ -5,7 +5,7 @@ import PageVisits from '../../components/PageVisits'
 
 import Cookies from 'js-cookie';
 
-export default function Home() {
+export default function About() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <h1 className='text-4xl font-bold text-center m-6'>Meet the developer</h1>
@@ -34,9 +34,6 @@ export default function Home() {
         < Link href={"/contact"} className='bg-black p-2 text-white mt-3'>Get in touch</Link>
         </div>
       </div>
-      
-      
-
       {/* Skills */}
       <div className='flex flex-col items-center'>
         <h1 className='text-2xl font-bold text-center m-4'>Skills</h1>
