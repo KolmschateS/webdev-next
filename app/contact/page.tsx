@@ -29,6 +29,11 @@ export default function Home() {
     await setCaptcha(_captcha);
     await setCaptchaAnswer(_captchaAnswer);
     await setCaptchaRiddle(_captchaRiddle);
+
+    // set focus to captcha input
+    const captchaInput = document.querySelector<HTMLInputElement>('input[name="captcha"]');
+    if (captchaInput)
+      captchaInput.focus();
   }
 
   function emailValidation(email: string)
@@ -44,6 +49,18 @@ export default function Home() {
     } else {
       return false
     }
+  }
+
+  function resetPage()
+  {
+    setSubjectError("")
+    setEmailError("")
+    setMessageError("")
+    setCaptchaError("")
+    setCaptcha("")
+    setCaptchaAnswer("")
+    setCaptchaRiddle("")
+    setFormSubmitted(false)
   }
   
   async function handleFormClient(e: any) {
@@ -164,6 +181,7 @@ export default function Home() {
             <p className='font-bold'>Thank you for your message!</p>
             <p>I will get back to you as soon as possible.</p>
             <p>Greetings, Sebastiaan :)</p>
+            <button className='bg-black mt-2 text-white p-1' onClick={resetPage}>Return</button>
           </div>
         </div>
         }
