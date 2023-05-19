@@ -11,7 +11,8 @@ export async function handleForm(formData: FormData)
     const email: string = String(formData.get('email'))
     const message:string  = String(formData.get('message'))
 
-    await isValidData(formData)
+    if (!isValidData(formData))
+      return
 
     const mailOptionsDev: nodemailer.SendMailOptions = {
         from: process.env.DEV_MAIL as string,
@@ -70,20 +71,15 @@ export async function handleForm(formData: FormData)
     const message:string  = String(fromData.get('message'))
 
     if(!(subject.length > 0 && subject.length < 200))
-    {
-      throw new Error('Subject is not valid')
-    }
+      return false
 
     if(!validateEmail(email))
-    {
-      throw new Error('Email is not valid')
-    }
+      return false
 
     if(!(message.length > 0 && message.length < 600))
-    {
-      throw new Error('Message is not valid')
-    }
-
+      return false
+      
+    return true
   }
 
   const validateEmail = (email: string): boolean => {
