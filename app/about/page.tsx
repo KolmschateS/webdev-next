@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import PageVisits from '../../components/PageVisits'
-
-import Cookies from 'js-cookie';
+import PageVisits from './PageVisits'
 
 export default function About() {
+  
+
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
       <h1 className='text-4xl font-bold text-center m-6'>Meet the developer</h1>
@@ -48,7 +48,7 @@ export default function About() {
         <p>⚙️ In progess of being added to this website</p>
       </div>
 
-      < PageVisits />
+      < PageVisits  />
     </main>
   )
 }
