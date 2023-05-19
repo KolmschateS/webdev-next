@@ -1,6 +1,8 @@
 "use server"
 import { revalidatePath } from 'next/cache'
 
+import { prisma } from 'server/db/client'
+
 import nodemailer from 'nodemailer'
 
 export async function handleForm(formData: FormData)
@@ -10,7 +12,6 @@ export async function handleForm(formData: FormData)
     const message:string  = String(formData.get('message'))
 
     await isValidData(formData)
-
 
     const mailOptionsDev: nodemailer.SendMailOptions = {
         from: process.env.DEV_MAIL as string,
@@ -50,7 +51,16 @@ export async function handleForm(formData: FormData)
         }
         transporter.close();
     });
-      revalidatePath('/contact')
+
+    // save to database
+    await prisma.contact.create({
+        data: {
+            subject: subject,
+            email: email,
+            message: message
+        }
+    })
+    revalidatePath('/contact')
   }
 
   async function isValidData(fromData: FormData)

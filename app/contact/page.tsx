@@ -13,7 +13,6 @@ export default function Home() {
   const [captchaError, setCaptchaError] = useState("")
 
   const [captcha, setCaptcha] = useState("")
-  const [captchaAnswerNumber, setCaptchaAnswerNumber] = useState(0)
   const [captchaAnswer, setCaptchaAnswer] = useState("")
   const [captchaRiddle, setCaptchaRiddle] = useState("")
 
@@ -28,7 +27,6 @@ export default function Home() {
     const _captchaRiddle = numbersToWordsMapping[_captchaAnswerNumber];
 
     await setCaptcha(_captcha);
-    await setCaptchaAnswerNumber(_captchaAnswerNumber);
     await setCaptchaAnswer(_captchaAnswer);
     await setCaptchaRiddle(_captchaRiddle);
   }
