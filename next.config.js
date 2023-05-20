@@ -19,12 +19,20 @@ const nextConfig = {
                     },
                     {
                         key: "X-Frame-Options",
-                        value: "DENY"
+                        value: "SAMEORIGIN"
                     },
                     {
                         key: "Content-Security-Policy",
                         value: "frame-ancestors 'none';"
-                    }
+                    },
+                    {
+                        key: 'X-XSS-Protection',
+                        value: '1; mode=block'
+                      },
+                      {
+                        key: 'Referrer-Policy',
+                        value: 'origin-when-cross-origin'
+                      }
                 ]
             }
         ]
