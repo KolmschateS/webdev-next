@@ -54,8 +54,8 @@ export default function Map(){
     // @ts-ignore
     const currentLocationMarkerIcon = new icon({
         iconUrl: '/dark-mode-location.svg',
-        iconSize: [32, 32],
-        iconAnchor: [16, 32],
+        iconSize: [28, 28],
+        iconAnchor: [14, 28],
     })
 
     // button to moe map to current location
@@ -69,7 +69,7 @@ export default function Map(){
         };
     
         return (
-          <button onClick={handleMapView} style={{ position: 'absolute', bottom: '25px', right: '15px', zIndex: 1000  }}>
+          <button onClick={handleMapView} style={{ position: 'absolute', bottom: '40px', right: '35px', zIndex: 1000  }}>
             < Image src='/dark-mode-location-button.svg' width={64} height={64} alt="Current position"/>
           </button>
         );
@@ -106,7 +106,7 @@ export default function Map(){
             attribution='<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url= "https://{s}.tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token=OQP6uIuVio7WAmQJlqFEbWwLLjgxuZ7NNg6eUQV61fJKfIiKEmYPqv5vFmyXiaWZ"
             />
-            <LocationMarker />
+            {gps && <LocationMarker />}
             <div>
                 <MapViewButton />
             </div>

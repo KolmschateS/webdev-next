@@ -1,17 +1,10 @@
-<svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2_110)">
-<circle cx="54.5" cy="54.5" r="33" fill="#3B82F7" stroke="white" stroke-width="5"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M54.6122 42.63V37ZM52.1122 39H57.1122Z" fill="white"/>
-<path d="M54.6122 42.63V37M52.1122 39H57.1122" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M54.6122 56C54.6122 56 59.1122 48.5 57.6122 45.5C57.6122 45.5 56.6122 43 54.6122 43C52.6122 43 51.6122 45.5 51.6122 45.5C50.1122 48.5 54.6122 56 54.6122 56Z" fill="white" stroke="black" stroke-width="1.5"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M44.6122 68C50.1122 71.5 59.1122 71.5 64.6122 68V61C64.6122 61 73.6122 56.5 70.6122 50.5C66.6122 44 57.1122 47 54.6122 54.5C52.1122 47 42.6122 44 38.6122 50.5C35.6122 56.5 44.6122 61 44.6122 61V68Z" fill="white"/>
-<path d="M54.6122 54.5C57.1122 47 66.6122 44 70.6122 50.5C73.6122 56.5 64.6122 61 64.6122 61V68C59.1122 71.5 50.1122 71.5 44.6122 68V61C44.6122 61 35.6122 56.5 38.6122 50.5C42.6122 44 52.1122 47 54.6122 54.5ZM54.6122 54.5V58" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M44.6122 61C50.1122 58 59.1122 58 64.6122 61ZM44.6122 64.5C50.1122 61.5 59.1122 61.5 64.6122 64.5ZM44.6122 68C50.1122 65 59.1122 65 64.6122 68Z" fill="white"/>
-<path d="M44.6122 61C50.1122 58 59.1122 58 64.6122 61M44.6122 64.5C50.1122 61.5 59.1122 61.5 64.6122 64.5M44.6122 68C50.1122 65 59.1122 65 64.6122 68" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<defs>
-<clipPath id="clip0_2_110">
-<rect width="110" height="110" fill="white"/>
-</clipPath>
-</defs>
+<svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="35.5" cy="35.5" r="33" fill="#3B82F7" stroke="white" stroke-width="5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M35.6122 23.63V18ZM33.1122 20H38.1122Z" fill="white"/>
+<path d="M35.6122 23.63V18M33.1122 20H38.1122" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M35.6122 37C35.6122 37 40.1122 29.5 38.6122 26.5C38.6122 26.5 37.6122 24 35.6122 24C33.6122 24 32.6122 26.5 32.6122 26.5C31.1122 29.5 35.6122 37 35.6122 37Z" fill="white" stroke="black" stroke-width="1.5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M25.6122 49C31.1122 52.5 40.1122 52.5 45.6122 49V42C45.6122 42 54.6122 37.5 51.6122 31.5C47.6122 25 38.1122 28 35.6122 35.5C33.1122 28 23.6122 25 19.6122 31.5C16.6122 37.5 25.6122 42 25.6122 42V49Z" fill="white"/>
+<path d="M35.6122 35.5C38.1122 28 47.6122 25 51.6122 31.5C54.6122 37.5 45.6122 42 45.6122 42V49C40.1122 52.5 31.1122 52.5 25.6122 49V42C25.6122 42 16.6122 37.5 19.6122 31.5C23.6122 25 33.1122 28 35.6122 35.5ZM35.6122 35.5V39" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M25.6122 42C31.1122 39 40.1122 39 45.6122 42ZM25.6122 45.5C31.1122 42.5 40.1122 42.5 45.6122 45.5ZM25.6122 49C31.1122 46 40.1122 46 45.6122 49Z" fill="white"/>
+<path d="M25.6122 42C31.1122 39 40.1122 39 45.6122 42M25.6122 45.5C31.1122 42.5 40.1122 42.5 45.6122 45.5M25.6122 49C31.1122 46 40.1122 46 45.6122 49" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

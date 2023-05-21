@@ -8,7 +8,7 @@ export default function GDPR( {fullScreen} ) {
     const [showGDPRWindow, setShowGDPRWindow] = useState(false);
     const [gdpr, setGDPR] = useState("")
 
-    const fullScreenClassName = "fixed top-0 left-0 w-screen h-screen flex justify-center items-center z-50`"
+    const fullScreenClassName = "fixed top-0 left-0 w-screen h-screen flex justify-center items-center gdpr-fullscreen"
     const fullScreenClassName2 = "absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 backdrop-blur-sm"
     const normalClassName = "m-3"
 
