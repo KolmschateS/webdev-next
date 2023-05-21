@@ -19,6 +19,7 @@ export default function Home() {
       <p className="text-center pb-10">
         Find people to play chess with in person.
       </p>
+      <h2 className='text-2xl font-bold pb-5'>Explore</h2>
       <Map />
     </main>
   )
