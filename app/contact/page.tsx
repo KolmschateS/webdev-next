@@ -131,7 +131,7 @@ export default function Home() {
     }
   }
     return (
-      <main className="flex min-h-screen flex-col items-center p-24">
+      <main className="flex min-h-screen flex-col items-center">
         <h1 className="text-4xl font-bold">Contact</h1> 
         <p>Get in touch with the developer</p> 
         <Link href={"/about"} className="fond-bold underline">Sebastiaan Kolmschate</Link> 

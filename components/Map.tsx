@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents, useMap } from 'react-leaflet'
 import { icon } from 'leaflet'
 
-export default function Map(){
+export default function Map({ height = "100vh"}){
     const [latitude, setLatitude] = useState<number | null>(null);
     const [longitude, setLongitude] = useState<number | null>(null);
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -58,7 +58,7 @@ export default function Map(){
         iconAnchor: [14, 28],
     })
 
-    // button to moe map to current location
+    // button to move map to current location
     const MapViewButton = () => {
         const map = useMap();
     
@@ -69,7 +69,7 @@ export default function Map(){
         };
     
         return (
-          <button onClick={handleMapView} style={{ position: 'absolute', bottom: '40px', right: '35px', zIndex: 1000  }}>
+          <button type='button' onClick={handleMapView} style={{ position: 'absolute', bottom: '40px', right: '35px', zIndex: 1000  }}>
             < Image src='/dark-mode-location-button.svg' width={64} height={64} alt="Current position"/>
           </button>
         );
@@ -97,11 +97,11 @@ export default function Map(){
       }, []);
 
     return (
-      <div style={{ height: '500px', width: '100%' }}>
+      <div style={{ height: height, width: '100%' }}>
         {isLoading ? (
           <div className='text-center'>Loading map...</div>
         ) : (
-          <MapContainer center={[latitude || 0, longitude || 0]} zoom={13} style={{height: '500px', width: '100%'}}>
+          <MapContainer center={[latitude || 0, longitude || 0]} zoom={13} style={{height: height, width: '100%'}}>
              <TileLayer
             attribution='<a href="http://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url= "https://{s}.tile.jawg.io/jawg-dark/{z}/{x}/{y}{r}.png?access-token=OQP6uIuVio7WAmQJlqFEbWwLLjgxuZ7NNg6eUQV61fJKfIiKEmYPqv5vFmyXiaWZ"

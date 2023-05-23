@@ -24,3 +24,8 @@ body {
 {
   z-index: 10000;
 }
+
+.borderless-input{
+  border: none;
+  outline: none;
+}

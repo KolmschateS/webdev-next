@@ -17,3 +17,35 @@ model Contact {
   message   String
   createdAt DateTime @default(now())
 }
+
+model Game {
+  id        Int      @default(autoincrement()) @id
+  venue Venue  @relation(fields: [venueId], references: [id])
+  venueId Int
+  private  Boolean
+  password String?
+  moves Move[]
+  createdAt DateTime @default(now())
+}
+
+model Venue {
+  id        Int      @default(autoincrement()) @id
+  games     Game[]
+  latitude  Float
+  longitude Float
+  createdAt DateTime @default(now())
+}
+
+model Move {
+  id        Int      @default(autoincrement()) @id
+  game      Game     @relation(fields: [gameId], references: [id])
+  gameId    Int
+  turn      Int
+  white     Boolean
+  piece     Int
+  column    Int
+  row       Int
+  time      Int
+  createdAt DateTime @default(now())
+}
+

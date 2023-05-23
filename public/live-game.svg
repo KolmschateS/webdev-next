@@ -1,7 +1,7 @@
 <svg width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_7_126)">
-<rect x="7.5" y="7.5" width="77" height="77" rx="7.5" stroke="#F73B3B" stroke-width="5"/>
-<path d="M82 15C82 12.2386 79.7614 10 77 10H73V19H82V15Z" fill="black"/>
+<rect x="7.5" y="7.5" width="77" height="77" stroke="#F73B3B" stroke-width="5"/>
+<rect width="9" height="9" transform="matrix(-1 0 0 1 82 10)" fill="black"/>
 <rect width="9" height="9" transform="matrix(-1 0 0 1 82 28)" fill="black"/>
 <rect width="9" height="9" transform="matrix(-1 0 0 1 82 46)" fill="black"/>
 <rect width="9" height="9" transform="matrix(-1 0 0 1 82 64)" fill="black"/>
@@ -32,8 +32,8 @@
 <rect width="9" height="9" transform="matrix(-1 0 0 1 19 19)" fill="black"/>
 <rect width="9" height="9" transform="matrix(-1 0 0 1 19 37)" fill="black"/>
 <rect width="9" height="9" transform="matrix(-1 0 0 1 19 55)" fill="black"/>
-<path d="M19 73H10V77C10 79.7614 12.2386 82 15 82H19V73Z" fill="black"/>
-<path d="M82 77C82 79.7614 79.7614 82 77 82H73V73H82V77Z" fill="white"/>
+<rect width="9" height="9" transform="matrix(-1 0 0 1 19 73)" fill="black"/>
+<rect x="82" y="82" width="9" height="9" transform="rotate(-180 82 82)" fill="white"/>
 <rect x="82" y="64" width="9" height="9" transform="rotate(-180 82 64)" fill="white"/>
 <rect x="82" y="46" width="9" height="9" transform="rotate(-180 82 46)" fill="white"/>
 <rect x="82" y="28" width="9" height="9" transform="rotate(-180 82 28)" fill="white"/>
@@ -64,8 +64,8 @@
 <rect x="19" y="73" width="9" height="9" transform="rotate(-180 19 73)" fill="white"/>
 <rect x="19" y="55" width="9" height="9" transform="rotate(-180 19 55)" fill="white"/>
 <rect x="19" y="37" width="9" height="9" transform="rotate(-180 19 37)" fill="white"/>
-<path d="M19 19H10V15C10 12.2386 12.2386 10 15 10H19V19Z" fill="white"/>
-<rect x="2.5" y="2.5" width="87" height="87" rx="12.5" stroke="white" stroke-width="5"/>
+<rect x="19" y="19" width="9" height="9" transform="rotate(-180 19 19)" fill="white"/>
+<rect x="2.5" y="2.5" width="87" height="87" stroke="white" stroke-width="5"/>
 </g>
 <defs>
 <clipPath id="clip0_7_126">

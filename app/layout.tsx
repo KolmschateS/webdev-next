@@ -27,8 +27,9 @@ export default function RootLayout({
       <body className='bg-black'>
         <div className="flex flex-col min-h-screen">
           < Nav />
-
-          {children}
+          <div className='mt-20'>
+            {children}
+          </div>
 
           < Footer />
           <GDPR fullScreen={true} />

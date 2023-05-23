@@ -37,8 +37,8 @@ export default function Nav() {
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 < Link className="flex items-center" href="/">
                     < Image src="/otb.svg" alt="Over the board" width={32} height={32} />
+                    <p className='font-bold pl-4'>Over the board</p>
                 </Link>
-
                 {/* Mobile menu button */}
                 <div className="md:hidden">
                     <button

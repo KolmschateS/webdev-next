@@ -7,8 +7,8 @@ export default function About() {
   
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
-      <h1 className='text-4xl font-bold text-center m-6'>Meet the developer</h1>
+    <main className="flex min-h-screen flex-col items-center pl-12 pr-12 ">
+      <h1 className='text-4xl font-bold text-center'>Meet the developer</h1>
       {/* Image of developer */}
       < Image className='rounded-full' src="/sebas.png" width={256} height={256} alt="Image of the developer"></Image>
       <div className='bg-white mt-6 p-6'>
