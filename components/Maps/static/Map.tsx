@@ -1,3 +1,5 @@
+"use client"
+
 import { MapContainer, TileLayer} from 'react-leaflet'
 
 import LocationMarker from './LocationMarker';

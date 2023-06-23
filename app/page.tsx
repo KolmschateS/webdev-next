@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import Map from '@/components/Maps/dynamic/Map';
+import Map from '@/components/Maps/static/Map';
 
 export default function Home() {
   return (
