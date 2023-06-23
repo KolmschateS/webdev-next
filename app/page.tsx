@@ -1,24 +1,16 @@
-import dynamic from 'next/dynamic'
-
 import Link from 'next/link';
 
+import Map from '@/components/Maps/dynamic/Map';
+
 export default function Home() {
-  const Map = dynamic(
-    () => import('@/components/Map'), // replace '@components/map' with your component's location
-    { 
-      loading: () => <p>A map is loading</p>,
-      ssr: false // This line is important. It's what prevents server-side render
-    }
-  )
-  
   return (
     <main className="flex min-h-screen flex-col items-center">
       {/* Brand text with a short subscription of the app */}
       <div className='mb-3 items-center'>
-        < Link href="/game" className='bg-white text-black p-2 rounded-sm'>Create game</Link>
+        < Link href="/event/new" className='bg-white text-black p-2 font-bold'>Create event</Link>
         <h2 className='text-2xl font-bold m-5 text-center'>Explore</h2>
       </div>
-      <Map />
+      <Map height='60vh' width='100%' pick={false}/>
     </main>
   )
 }

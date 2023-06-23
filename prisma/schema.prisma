@@ -17,35 +17,49 @@ model Contact {
   message   String
   createdAt DateTime @default(now())
 }
+model User {
+  id           Int      @id @default(autoincrement())
+  name         String
+  events       Event[]  @relation("UserEvents")
+  eventsCreated Event[]  @relation("UserEventsCreated")
+}
+
+model Location {
+  id        Int      @id @default(autoincrement())
+  longitude Float
+  latitude  Float
+  event     Event?
+}
+
+model TimeControl {
+  id        Int    @id @default(autoincrement())
+  time      Int
+  increment Int
+  event     Event?
+}
+
+model Event {
+  id             Int          @id @default(autoincrement())
+  user1          User         @relation("UserEventsCreated", fields: [user1Id], references: [id])
+  user1Id        Int
+  user2          User?        @relation("UserEvents", fields: [user2Id], references: [id])
+  user2Id        Int?
+  location       Location?    @relation(fields: [locationId], references: [id])
+  locationId     Int? @unique
+  status         String
+  timeControl    TimeControl? @relation(fields: [timeControlId], references: [id])
+  timeControlId  Int? @unique
+  isPrivate      Boolean
+  games          Game[]
+}
 
 model Game {
-  id        Int      @default(autoincrement()) @id
-  venue Venue  @relation(fields: [venueId], references: [id])
-  venueId Int
-  private  Boolean
-  password String?
-  moves Move[]
-  createdAt DateTime @default(now())
+  id                Int      @id @default(autoincrement())
+  event             Event    @relation(fields: [eventId], references: [id])
+  eventId           Int
+  timeLeftForWhite  Int
+  timeLeftForBlack  Int
+  pgnWhite          String
+  pgnBlack          String
+  winner            String?
 }
-
-model Venue {
-  id        Int      @default(autoincrement()) @id
-  games     Game[]
-  latitude  Float
-  longitude Float
-  createdAt DateTime @default(now())
-}
-
-model Move {
-  id        Int      @default(autoincrement()) @id
-  game      Game     @relation(fields: [gameId], references: [id])
-  gameId    Int
-  turn      Int
-  white     Boolean
-  piece     Int
-  column    Int
-  row       Int
-  time      Int
-  createdAt DateTime @default(now())
-}
-

@@ -29,3 +29,15 @@ body {
   border: none;
   outline: none;
 }
+
+.selected-button
+{
+  background-color: #1e90ff;
+  color: white;
+}
+
+.unselected-button
+{
+  background-color: white;
+  color: #1e90ff;
+}

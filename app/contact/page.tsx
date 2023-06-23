@@ -137,7 +137,7 @@ export default function Home() {
         <Link href={"/about"} className="fond-bold underline">Sebastiaan Kolmschate</Link> 
 
         {!formSubmitted &&
-        <form action={handleForm} className="bg-white text-black p-6" onSubmit={handleFormClient}>
+        <form className="bg-white text-black p-6" onSubmit={handleFormClient}>
           <div className='form'>
             <label htmlFor="subject" className="block font-bold">Subject</label>
             <input name='subject' className="border-2 border-black" type="text"/>
