@@ -19,3 +19,25 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+.gdpr-fullscreen
+{
+  z-index: 10000;
+}
+
+.borderless-input{
+  border: none;
+  outline: none;
+}
+
+.selected-button
+{
+  background-color: #1e90ff;
+  color: white;
+}
+
+.unselected-button
+{
+  background-color: white;
+  color: #1e90ff;
+}

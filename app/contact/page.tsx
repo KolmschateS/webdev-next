@@ -131,13 +131,13 @@ export default function Home() {
     }
   }
     return (
-      <main className="flex min-h-screen flex-col items-center p-24">
+      <main className="flex min-h-screen flex-col items-center">
         <h1 className="text-4xl font-bold">Contact</h1> 
         <p>Get in touch with the developer</p> 
         <Link href={"/about"} className="fond-bold underline">Sebastiaan Kolmschate</Link> 
 
         {!formSubmitted &&
-        <form action={handleForm} className="bg-white text-black p-6" onSubmit={handleFormClient}>
+        <form className="bg-white text-black p-6" onSubmit={handleFormClient}>
           <div className='form'>
             <label htmlFor="subject" className="block font-bold">Subject</label>
             <input name='subject' className="border-2 border-black" type="text"/>
