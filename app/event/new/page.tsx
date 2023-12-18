@@ -11,11 +11,13 @@ export default function Event() {
     const [privateGame, setPrivateGame] = useState(false)
 
     const [position, setPosition] = useState([0,0])
+    const [promptAccepted, setPromptAccepted] = useState(false)
 
-    const [pick, setPick] = useState(false)
+    const [pick, setPick] = useState(true)
 
     function handleCurrentButton()
     {
+        setPosition([0,0])
         setPick(false)
     }
 
@@ -43,8 +45,8 @@ export default function Event() {
                 <button className={!pick ? activeButton : deActivateButton} onClick={handleCurrentButton}>Current</button>
                 <button className={pick ? activeButton : deActivateButton} onClick={handleMapButton}>Pick on map</button>
             </div>
-            < Map pick={pick} position={position} setPosition={setPosition}/>
-                <h2 className='text-2xl font-bold m-5 text-center'>{position && [position[0], position[1]]}</h2>
+            < Map pick={pick} position={position} setPosition={setPosition} promptAccepted={promptAccepted} setPromptAccepted={setPromptAccepted}/>
+            {!promptAccepted ? <p className='text-center text-red-500'>Allow location to use current location</p> : null}
             <div className='text-center m-3'>
                 <form action={handleForm}>
                 <div className='bg-white text-black'>

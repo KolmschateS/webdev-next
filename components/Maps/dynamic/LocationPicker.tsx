@@ -4,7 +4,7 @@ import L from 'leaflet';
 
 import Image from 'next/image';
 
-export default function LocationPicker({position, setPosition}) {
+export default function LocationPicker({position, setPosition, setPromptAccepted}) {
   const map = useMap();
 
   // Create a custom icon instance
@@ -18,8 +18,11 @@ export default function LocationPicker({position, setPosition}) {
     fetch('https://ipapi.co/json/')
       .then(response => response.json())
       .then(data => {
-        map.setView([data.latitude, data.longitude], map.getZoom());
-        setPosition([map.getCenter().lat, map.getCenter().lng])
+        if(data.latitude && data.longitude)
+        {
+          map.setView([data.latitude, data.longitude], map.getZoom());
+          setPosition([map.getCenter().lat, map.getCenter().lng])
+        }
       });
   }
 
@@ -31,12 +34,15 @@ export default function LocationPicker({position, setPosition}) {
     setPosition([map.getCenter().lat, map.getCenter().lng])
     map.locate().on("locationfound", function (e) {
       if (e.latlng) {
+        console.log("location found")
         map.setView(e.latlng, map.getZoom());
         setPosition([map.getCenter().lat, map.getCenter().lng])
+        setPromptAccepted(true);
       }
     })
       .on("locationerror", function (e) {
         getIpPosition();
+        setPromptAccepted(false);
       });
 
       map.on('move', onMove)
@@ -55,7 +61,7 @@ export default function LocationPicker({position, setPosition}) {
         zIndex: 999,
       }}
     >
-      <Image width="32" height="32" src="/location.svg" />
+      <Image width="32" height="32" src="/location.svg" alt="marker" />
       {position != null && [position.lat, position.lng]}
     </div>
   )
